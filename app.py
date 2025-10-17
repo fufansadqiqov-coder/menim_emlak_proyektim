@@ -26,7 +26,8 @@ S3_FILE_KEY = "HomeSalesData.xlsx"
 s3 = boto3.client(
     "s3",
     aws_access_key_id=AWS_ACCESS_KEY,
-    aws_secret_access_key=AWS_SECRET_KEY
+    aws_secret_access_key=AWS_SECRET_KEY,
+    region_name="eu-north-1"
 )
 
 # -------------------------------
@@ -166,6 +167,7 @@ if start_btn:
         run_scraping(receiver_email)
     else:
         st.warning("Please enter your email first.")
+
 
 
 
