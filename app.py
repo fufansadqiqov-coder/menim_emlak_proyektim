@@ -15,8 +15,8 @@ from io import BytesIO
 # -------------------------------
 # 1️⃣ AWS S3 CONFIGURATION
 # -------------------------------
-AWS_ACCESS_KEY = "AKIAQQ4Z4MHLCJMOJXVL"
-AWS_SECRET_KEY = "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"
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 S3_BUCKET = "emlak-bot"
 S3_FILE_KEY = "HomeSalesData.xlsx"
 
@@ -163,3 +163,4 @@ if start_btn:
         run_scraping(receiver_email)
     else:
         st.warning("Please enter your email first.")
+
