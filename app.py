@@ -18,8 +18,8 @@ from io import BytesIO
 # -------------------------------
 import streamlit as st
 
-AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY_ID"]
-AWS_SECRET_KEY = st.secrets["AWS_SECRET_ACCESS_KEY"]
+AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY"]
+AWS_SECRET_KEY = st.secrets["AWS_SECRET_KEY"]
 S3_BUCKET = "emlak-bot"
 S3_FILE_KEY = "HomeSalesData.xlsx"
 
@@ -166,6 +166,7 @@ if start_btn:
         run_scraping(receiver_email)
     else:
         st.warning("Please enter your email first.")
+
 
 
 
