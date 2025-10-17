@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from openpyxl import load_workbook, Workbook
 import re
+import os
 import pandas as pd
 import time
 from rapidfuzz import process, fuzz
@@ -163,4 +164,5 @@ if start_btn:
         run_scraping(receiver_email)
     else:
         st.warning("Please enter your email first.")
+
 
