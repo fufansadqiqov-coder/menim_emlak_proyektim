@@ -4,4 +4,5 @@ geopy
 rapidfuzz
 streamlit
 requests
+boto3
 bs4
