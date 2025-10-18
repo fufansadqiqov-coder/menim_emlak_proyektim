@@ -33,7 +33,7 @@ s3 = boto3.client(
 # -------------------------------
 # 2️⃣ STREAMLIT CONFIG
 # -------------------------------
-st.set_page_config(page_title="🏠 Real Estate Web Scraper S3", page_icon="🏘️", layout="centered")
+st.set_page_config(page_title="🏠 Real Estate Web Scraper S3", page_icon="", layout="centered")
 st.title("🏘️ Web Scraper + AWS S3 + Email Sender")
 
 receiver_email = st.text_input("Enter your email to receive the report:")
@@ -167,6 +167,7 @@ if start_btn:
         run_scraping(receiver_email)
     else:
         st.warning("Please enter your email first.")
+
 
 
 
